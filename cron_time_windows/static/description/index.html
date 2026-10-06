@@ -1,0 +1,118 @@
+<section class="container" style="max-width: 960px; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1f2937;">
+
+    <div class="text-center" style="padding: 32px 0 16px;">
+        <h1 style="font-size: 2.4rem; font-weight: 700; margin-bottom: 8px; color: #064e3b;">
+            Cron Time Windows
+        </h1>
+        <p style="font-size: 1.25rem; font-weight: 600; color: #047857; margin: 0 0 12px;">
+            Business hours &amp; fixed times for every scheduled action
+        </p>
+        <p style="font-size: 1.1rem; color: #4b5563; margin: 0 auto; max-width: 740px;">
+            Tell each cron <b>when</b> it may run: every 5 minutes during office hours, every
+            30 minutes in the evening, never at night. Or run it at fixed times: every day at
+            07:30, every Monday at 09:00, on the last day of the month.
+        </p>
+    </div>
+
+    <div class="text-center" style="padding: 8px 0 32px;">
+        <img src="banner.png" alt="Cron Time Windows" style="max-width: 100%; border-radius: 16px; box-shadow: 0 12px 32px rgba(6, 78, 59, 0.25);"/>
+    </div>
+
+    <h2 style="font-size: 1.6rem; font-weight: 700; color: #064e3b; margin: 16px 0;">One cron, three time windows</h2>
+    <p style="font-size: 1.05rem;">The <b>Sync ads</b> example, set in a minute on the native cron form:</p>
+    <div style="display: flex; height: 44px; border-radius: 10px; overflow: hidden; font-size: 0.9rem; font-weight: 600; color: #ffffff; margin: 8px 0 4px;">
+        <div style="width: 33.3333%; background: #94a3b8; display: flex; align-items: center; justify-content: center;">Pause</div>
+        <div style="width: 41.6667%; background: #059669; display: flex; align-items: center; justify-content: center;">Every 5 min</div>
+        <div style="width: 20.8333%; background: #0d9488; display: flex; align-items: center; justify-content: center;">Every 30 min</div>
+        <div style="width: 4.1667%; background: #94a3b8;"></div>
+    </div>
+    <div style="display: flex; font-size: 0.85rem; color: #6b7280; margin-bottom: 24px; white-space: nowrap;">
+        <div style="width: 33.3333%;">00:00</div>
+        <div style="width: 41.6667%;">08:00</div>
+        <div style="width: 20.8333%;">18:00</div>
+        <div style="width: 4.1667%;">23:00</div>
+    </div>
+
+    <h2 style="font-size: 1.6rem; font-weight: 700; color: #064e3b; margin: 16px 0;">Features</h2>
+    <div class="row">
+        <div class="col-md-6" style="margin-bottom: 20px;">
+            <div style="background: #ecfdf5; border-radius: 12px; padding: 20px; height: 100%;">
+                <h3 style="font-size: 1.15rem; font-weight: 700; margin-top: 0;">A frequency per time window</h3>
+                <p style="margin: 0;">Each window runs the job at its own interval, in minutes or hours, or pauses it.
+                    Slots are aligned on the window start (08:00, 08:05, 08:10...), so the cadence never drifts.</p>
+            </div>
+        </div>
+        <div class="col-md-6" style="margin-bottom: 20px;">
+            <div style="background: #f0fdfa; border-radius: 12px; padding: 20px; height: 100%;">
+                <h3 style="font-size: 1.15rem; font-weight: 700; margin-top: 0;">Fixed times</h3>
+                <p style="margin: 0;">Daily, weekly or monthly times, as many as you need. A job set on the 31st runs
+                    on the last day of shorter months.</p>
+            </div>
+        </div>
+        <div class="col-md-6" style="margin-bottom: 20px;">
+            <div style="background: #f0fdfa; border-radius: 12px; padding: 20px; height: 100%;">
+                <h3 style="font-size: 1.15rem; font-weight: 700; margin-top: 0;">Weekdays and night shifts</h3>
+                <p style="margin: 0;">Limit a window to some weekdays, or let it cross midnight: a Friday 22:00-06:00
+                    window covers Friday night until Saturday morning.</p>
+            </div>
+        </div>
+        <div class="col-md-6" style="margin-bottom: 20px;">
+            <div style="background: #ecfdf5; border-radius: 12px; padding: 20px; height: 100%;">
+                <h3 style="font-size: 1.15rem; font-weight: 700; margin-top: 0;">Your timezone, daylight saving included</h3>
+                <p style="margin: 0;">Windows follow the wall clock of the timezone you choose, across summer time
+                    and Ramadan changes alike. The next execution is still stored in UTC.</p>
+            </div>
+        </div>
+        <div class="col-md-6" style="margin-bottom: 20px;">
+            <div style="background: #ecfdf5; border-radius: 12px; padding: 20px; height: 100%;">
+                <h3 style="font-size: 1.15rem; font-weight: 700; margin-top: 0;">Preview before you save</h3>
+                <p style="margin: 0;">The form lists the next ten executions as you edit, and explains what is wrong
+                    when two windows overlap or the job would never run.</p>
+            </div>
+        </div>
+        <div class="col-md-6" style="margin-bottom: 20px;">
+            <div style="background: #f0fdfa; border-radius: 12px; padding: 20px; height: 100%;">
+                <h3 style="font-size: 1.15rem; font-weight: 700; margin-top: 0;">Many crons at once</h3>
+                <p style="margin: 0;">Save reusable templates, then select crons in the list and apply a template,
+                    another cron's schedule, or one you define on the spot.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 style="font-size: 1.6rem; font-weight: 700; color: #064e3b; margin: 16px 0;">How to use it</h2>
+    <ol style="font-size: 1.05rem; line-height: 1.7;">
+        <li>Open <b>Settings &gt; Technical &gt; Automation &gt; Scheduled Actions</b> (developer mode) and pick a cron.</li>
+        <li>In the new <b>Time Windows</b> tab, choose <b>Time windows</b> or <b>Fixed times</b>, and the timezone.</li>
+        <li>Add your windows (start, end, run or pause, interval, weekdays) or your fixed times.</li>
+        <li>Check the <b>Next executions</b> preview, then save. The next execution date updates at once.</li>
+        <li>To set up several crons, select them in the list and use <b>Actions &gt; Apply Time Windows</b>.</li>
+    </ol>
+
+    <h2 style="font-size: 1.6rem; font-weight: 700; color: #064e3b; margin: 16px 0;">Good to know</h2>
+    <ul style="font-size: 1.05rem; line-height: 1.7;">
+        <li>Works on <b>Odoo 18.0</b>, Community and Enterprise. Depends on <code>base</code> only.</li>
+        <li>Opt-in per cron: every cron stays on Odoo's <b>Native</b> scheduling until you change it, so the
+            mail queue, autovacuum and other core crons are never affected.</li>
+        <li>The cron itself keeps running: no extra dispatcher cron, and the scheduler's minute-level precision is kept.</li>
+        <li>A safety net skips a run that wakes up outside its window, or twice in the same slot, even when another
+            module triggers the cron. <b>Run Manually</b> always runs.</li>
+        <li>Restricted to administrators; every rule is checked on the server.</li>
+        <li>Available in English and French.</li>
+    </ul>
+
+    <div style="margin: 40px 0 24px; padding: 28px 32px; border-radius: 16px; background: #0f172a; color: #e2e8f0;">
+        <p style="font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #5eead4; margin: 0 0 8px;">
+            Made by WebThreenity
+        </p>
+        <h2 style="font-size: 1.5rem; font-weight: 700; color: #ffffff; margin: 0 0 10px;">Need more from Odoo?</h2>
+        <p style="font-size: 1.05rem; margin: 0 0 18px; color: #cbd5e1;">
+            WebThreenity implements, customizes and supports Odoo: ERP rollouts, custom modules, version
+            upgrades and integrations. Tell us about your project.
+        </p>
+        <a href="https://webthreenity.netlify.app" target="_blank" rel="noopener"
+           style="display: inline-block; padding: 10px 22px; border-radius: 10px; background: #14b8a6; color: #0f172a; font-weight: 700; text-decoration: none;">
+            Contact WebThreenity
+        </a>
+    </div>
+
+</section>
