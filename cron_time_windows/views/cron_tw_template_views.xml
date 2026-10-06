@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="cron_tw_template_view_list" model="ir.ui.view">
+        <field name="name">cron.tw.template.view.list</field>
+        <field name="model">cron.tw.template</field>
+        <field name="arch" type="xml">
+            <list string="Time Window Templates">
+                <field name="name"/>
+                <field name="tw_mode"/>
+                <field name="tw_tz"/>
+                <field name="tw_outside_action" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="cron_tw_template_view_form" model="ir.ui.view">
+        <field name="name">cron.tw.template.view.form</field>
+        <field name="model">cron.tw.template</field>
+        <field name="arch" type="xml">
+            <form string="Time Window Template">
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger"
+                            invisible="active"/>
+                    <field name="active" invisible="1"/>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name" placeholder="e.g. Office hours"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="tw_mode" widget="radio"/>
+                            <field name="tw_tz" invisible="tw_mode == 'native'"/>
+                            <field name="tw_outside_action" widget="radio"
+                                   invisible="tw_mode != 'windows'"/>
+                        </group>
+                        <group>
+                            <div class="text-muted" colspan="2" invisible="tw_mode != 'windows'">Outside the windows, the default interval is the Execute Every interval of each scheduled action the template is applied to.</div>
+                        </group>
+                    </group>
+                    <field name="tw_window_ids" invisible="tw_mode != 'windows'">
+                        <list editable="bottom"
+                              decoration-muted="action == 'pause'"
+                              decoration-warning="interval_exceeds_window">
+                            <field name="sequence" widget="handle"/>
+                            <field name="hour_from" widget="float_time"/>
+                            <field name="hour_to" widget="float_time"/>
+                            <field name="action"/>
+                            <field name="interval_number"
+                                   invisible="action != 'run'" required="action == 'run'"/>
+                            <field name="interval_type"
+                                   invisible="action != 'run'" required="action == 'run'"/>
+                            <field name="monday"/>
+                            <field name="tuesday"/>
+                            <field name="wednesday"/>
+                            <field name="thursday"/>
+                            <field name="friday"/>
+                            <field name="saturday"/>
+                            <field name="sunday"/>
+                            <field name="interval_exceeds_window" column_invisible="True"/>
+                        </list>
+                    </field>
+                    <field name="tw_fixed_ids" invisible="tw_mode != 'fixed'">
+                        <list editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="frequency"/>
+                            <field name="time_of_day" widget="float_time"/>
+                            <field name="weekday"
+                                   invisible="frequency != 'weekly'" required="frequency == 'weekly'"/>
+                            <field name="day_of_month"
+                                   invisible="frequency != 'monthly'" required="frequency == 'monthly'"/>
+                        </list>
+                    </field>
+                    <field name="note" placeholder="Internal notes..."/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="cron_tw_template_view_search" model="ir.ui.view">
+        <field name="name">cron.tw.template.view.search</field>
+        <field name="model">cron.tw.template</field>
+        <field name="arch" type="xml">
+            <search string="Time Window Templates">
+                <field name="name"/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <group>
+                    <filter string="Schedule Mode" name="groupby_tw_mode"
+                            context="{'group_by': 'tw_mode'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_cron_tw_template" model="ir.actions.act_window">
+        <field name="name">Time Window Templates</field>
+        <field name="res_model">cron.tw.template</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create a time window template</p>
+            <p>A template is a reusable set of time windows or fixed times. Apply it to several scheduled actions at once from their list view, with the Apply Time Windows action.</p>
+        </field>
+    </record>
+
+    <menuitem id="menu_cron_tw_template"
+              name="Time Window Templates"
+              parent="base.menu_automation"
+              action="action_cron_tw_template"
+              groups="base.group_system"
+              sequence="3"/>
+
+</odoo>

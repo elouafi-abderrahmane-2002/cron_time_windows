@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cron_tw_window_system,cron.tw.window system,model_cron_tw_window,base.group_system,1,1,1,1
+access_cron_tw_fixed_system,cron.tw.fixed system,model_cron_tw_fixed,base.group_system,1,1,1,1
+access_cron_tw_template_system,cron.tw.template system,model_cron_tw_template,base.group_system,1,1,1,1
+access_cron_tw_template_window_system,cron.tw.template.window system,model_cron_tw_template_window,base.group_system,1,1,1,1
+access_cron_tw_template_fixed_system,cron.tw.template.fixed system,model_cron_tw_template_fixed,base.group_system,1,1,1,1
+access_cron_tw_wizard_system,cron.tw.wizard system,model_cron_tw_wizard,base.group_system,1,1,1,1
+access_cron_tw_wizard_window_system,cron.tw.wizard.window system,model_cron_tw_wizard_window,base.group_system,1,1,1,1
+access_cron_tw_wizard_fixed_system,cron.tw.wizard.fixed system,model_cron_tw_wizard_fixed,base.group_system,1,1,1,1
