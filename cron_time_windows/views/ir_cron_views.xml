@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="ir_cron_view_form_inherit_time_windows" model="ir.ui.view">
+        <field name="name">ir.cron.view.form.inherit.time.windows</field>
+        <field name="model">ir.cron</field>
+        <field name="inherit_id" ref="base.ir_cron_view_form"/>
+        <field name="arch" type="xml">
+            <field name="nextcall" position="attributes">
+                <attribute name="attrs">{'readonly': [('tw_mode', '!=', 'native')]}</attribute>
+            </field>
+            <field name="nextcall" position="after">
+                <field name="tw_nextcall_local" attrs="{'invisible': [('tw_mode', '=', 'native')]}"/>
+            </field>
+            <xpath expr="//notebook" position="inside">
+                <page string="Time Windows" name="time_windows">
+                    <group>
+                        <group>
+                            <field name="tw_mode" widget="radio"/>
+                            <field name="tw_tz" attrs="{'invisible': [('tw_mode', '=', 'native')]}"/>
+                            <field name="tw_outside_action" widget="radio"
+                                   attrs="{'invisible': [('tw_mode', '!=', 'windows')]}"/>
+                            <field name="tw_served_until" groups="base.group_no_one"
+                                   attrs="{'invisible': [('tw_mode', '=', 'native')]}"/>
+                        </group>
+                        <group>
+                            <div class="text-muted" colspan="2" attrs="{'invisible': [('tw_mode', '!=', 'native')]}">Odoo's standard scheduling: the job runs at the Execute Every interval, counted from its next execution date.</div>
+                            <div class="text-muted" colspan="2" attrs="{'invisible': [('tw_mode', '!=', 'windows')]}">Each window runs the job at its own interval, counted from the window start. Leave every day unticked to apply a window every day. A window that ends before it starts crosses midnight and belongs to the day it starts on. Execute Every is only used outside the windows, when they are set to run at the default interval.</div>
+                            <div class="text-muted" colspan="2" attrs="{'invisible': [('tw_mode', '!=', 'fixed')]}">The job runs at each listed time; Execute Every is not used. A monthly line set on a day the month lacks (the 31st in April) runs on the last day of that month.</div>
+                        </group>
+                    </group>
+                    <field name="tw_window_ids" attrs="{'invisible': [('tw_mode', '!=', 'windows')]}">
+                        <tree editable="bottom"
+                              decoration-muted="action == 'pause'"
+                              decoration-warning="interval_exceeds_window">
+                            <field name="sequence" widget="handle"/>
+                            <field name="hour_from" widget="float_time"/>
+                            <field name="hour_to" widget="float_time"/>
+                            <field name="action"/>
+                            <field name="interval_number"
+                                   attrs="{'invisible': [('action', '!=', 'run')], 'required': [('action', '=', 'run')]}"/>
+                            <field name="interval_type"
+                                   attrs="{'invisible': [('action', '!=', 'run')], 'required': [('action', '=', 'run')]}"/>
+                            <field name="monday"/>
+                            <field name="tuesday"/>
+                            <field name="wednesday"/>
+                            <field name="thursday"/>
+                            <field name="friday"/>
+                            <field name="saturday"/>
+                            <field name="sunday"/>
+                            <field name="interval_exceeds_window" invisible="1"/>
+                        </tree>
+                    </field>
+                    <field name="tw_fixed_ids" attrs="{'invisible': [('tw_mode', '!=', 'fixed')]}">
+                        <tree editable="bottom">
+                            <field name="sequence" widget="handle"/>
+                            <field name="frequency"/>
+                            <field name="time_of_day" widget="float_time"/>
+                            <field name="weekday"
+                                   attrs="{'invisible': [('frequency', '!=', 'weekly')], 'required': [('frequency', '=', 'weekly')]}"/>
+                            <field name="day_of_month"
+                                   attrs="{'invisible': [('frequency', '!=', 'monthly')], 'required': [('frequency', '=', 'monthly')]}"/>
+                        </tree>
+                    </field>
+                    <separator string="Next executions" attrs="{'invisible': [('tw_mode', '=', 'native')]}"/>
+                    <field name="tw_preview" nolabel="1" class="font-monospace"
+                           attrs="{'invisible': [('tw_mode', '=', 'native')]}"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="ir_cron_view_list_inherit_time_windows" model="ir.ui.view">
+        <field name="name">ir.cron.view.list.inherit.time.windows</field>
+        <field name="model">ir.cron</field>
+        <field name="inherit_id" ref="base.ir_cron_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="nextcall" position="after">
+                <field name="tw_nextcall_local" optional="show"/>
+            </field>
+            <field name="interval_type" position="after">
+                <field name="tw_mode" optional="show" widget="badge"
+                       decoration-info="tw_mode == 'windows'"
+                       decoration-success="tw_mode == 'fixed'"
+                       decoration-muted="tw_mode == 'native'"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="ir_cron_view_search_inherit_time_windows" model="ir.ui.view">
+        <field name="name">ir.cron.view.search.inherit.time.windows</field>
+        <field name="model">ir.cron</field>
+        <field name="inherit_id" ref="base.ir_cron_view_search"/>
+        <field name="arch" type="xml">
+            <filter name="inactive" position="after">
+                <separator/>
+                <filter string="Time Windows" name="tw_windows"
+                        domain="[('tw_mode', '=', 'windows')]"/>
+                <filter string="Fixed Times" name="tw_fixed"
+                        domain="[('tw_mode', '=', 'fixed')]"/>
+            </filter>
+            <filter name="groupby_model_id" position="after">
+                <filter string="Schedule Mode" name="groupby_tw_mode"
+                        context="{'group_by': 'tw_mode'}"/>
+            </filter>
+        </field>
+    </record>
+
+</odoo>
