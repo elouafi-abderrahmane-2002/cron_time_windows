@@ -1,0 +1,845 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* cron_time_windows
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-01 00:00+0000\n"
+"PO-Revision-Date: 2026-10-01 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: cron_time_windows
+#: model_terms:ir.actions.act_window,help:cron_time_windows.action_cron_tw_template
+msgid "A template is a reusable set of time windows or fixed times. Apply it to several scheduled actions at once from their list view, with the Apply Time Windows action."
+msgstr "Un modèle est un ensemble réutilisable de plages horaires ou d'heures fixes. Appliquez-le à plusieurs actions planifiées à la fois depuis leur vue liste, avec l'action Appliquer des plages horaires."
+
+#. module: cron_time_windows
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_template_window__hour_to
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_window__hour_to
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_window_mixin__hour_to
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_wizard_window__hour_to
+msgid "A window that ends before it starts crosses midnight (22:00-06:00) and belongs to the day it starts on. Equal start and end cover 24 hours."
+msgstr "Une plage qui se termine avant de commencer passe minuit (22:00-06:00) et appartient au jour où elle commence. Un début égal à la fin couvre 24 heures."
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__action
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__action
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window_mixin__action
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__action
+msgid "Action"
+msgstr "Action"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: cron_time_windows
+#. odoo-python
+#: code:addons/cron_time_windows/models/cron_tw_mixin.py:0
+msgid "Add at least one fixed time, or choose another mode."
+msgstr "Ajoutez au moins une heure fixe, ou choisissez un autre mode."
+
+#. module: cron_time_windows
+#. odoo-python
+#: code:addons/cron_time_windows/models/cron_tw_mixin.py:0
+msgid "Add at least one time window, or choose another mode."
+msgstr "Ajoutez au moins une plage horaire, ou choisissez un autre mode."
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard__source__cron
+msgid "Another scheduled action"
+msgstr "Une autre action planifiée"
+
+#. module: cron_time_windows
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.cron_tw_wizard_view_form
+msgid "Apply"
+msgstr "Appliquer"
+
+#. module: cron_time_windows
+#: model:ir.actions.act_window,name:cron_time_windows.action_cron_tw_wizard
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.cron_tw_wizard_view_form
+msgid "Apply Time Windows"
+msgstr "Appliquer des plages horaires"
+
+#. module: cron_time_windows
+#: model:ir.model,name:cron_time_windows.model_cron_tw_wizard
+msgid "Apply Time Windows to Scheduled Actions"
+msgstr "Appliquer des plages horaires à des actions planifiées"
+
+#. module: cron_time_windows
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.cron_tw_template_view_form
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.cron_tw_template_view_search
+msgid "Archived"
+msgstr "Archivé"
+
+#. module: cron_time_windows
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.cron_tw_wizard_view_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: cron_time_windows
+#. odoo-python
+#: code:addons/cron_time_windows/wizard/cron_tw_wizard.py:0
+msgid "Choose the template or the scheduled action to copy the time windows from."
+msgstr "Choisissez le modèle ou l'action planifiée dont copier les plages horaires."
+
+#. module: cron_time_windows
+#: model_terms:ir.actions.act_window,help:cron_time_windows.action_cron_tw_template
+msgid "Create a time window template"
+msgstr "Créer un modèle de plages horaires"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed__create_uid
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template__create_uid
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_fixed__create_uid
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__create_uid
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__create_uid
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard__create_uid
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_fixed__create_uid
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed__create_date
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template__create_date
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_fixed__create_date
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__create_date
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__create_date
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard__create_date
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_fixed__create_date
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: cron_time_windows
+#: model:ir.model,name:cron_time_windows.model_cron_tw_fixed
+#: model:ir.model,name:cron_time_windows.model_cron_tw_fixed_mixin
+msgid "Cron Fixed Time"
+msgstr "Heure fixe de cron"
+
+#. module: cron_time_windows
+#: model:ir.model,name:cron_time_windows.model_cron_tw_window
+#: model:ir.model,name:cron_time_windows.model_cron_tw_window_mixin
+msgid "Cron Time Window"
+msgstr "Plage horaire de cron"
+
+#. module: cron_time_windows
+#: model:ir.model,name:cron_time_windows.model_cron_tw_line_mixin
+msgid "Cron Time Windows Line"
+msgstr "Ligne de plages horaires de cron"
+
+#. module: cron_time_windows
+#: model:ir.model,name:cron_time_windows.model_cron_tw_settings_mixin
+msgid "Cron Time Windows Settings"
+msgstr "Paramètres des plages horaires de cron"
+
+#. module: cron_time_windows
+#: model:ir.model,name:cron_time_windows.model_cron_tw_template
+msgid "Cron Time Windows Template"
+msgstr "Modèle de plages horaires de cron"
+
+#. module: cron_time_windows
+#: model:ir.model,name:cron_time_windows.model_cron_tw_template_fixed
+msgid "Cron Time Windows Template Fixed Time"
+msgstr "Heure fixe de modèle"
+
+#. module: cron_time_windows
+#: model:ir.model,name:cron_time_windows.model_cron_tw_template_window
+msgid "Cron Time Windows Template Window"
+msgstr "Plage horaire de modèle"
+
+#. module: cron_time_windows
+#: model:ir.model,name:cron_time_windows.model_cron_tw_wizard_fixed
+msgid "Cron Time Windows Wizard Fixed Time"
+msgstr "Heure fixe de l'assistant"
+
+#. module: cron_time_windows
+#: model:ir.model,name:cron_time_windows.model_cron_tw_wizard_window
+msgid "Cron Time Windows Wizard Window"
+msgstr "Plage horaire de l'assistant"
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed__frequency__daily
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed_mixin__frequency__daily
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template_fixed__frequency__daily
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard_fixed__frequency__daily
+msgid "Daily"
+msgstr "Quotidienne"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed__day_of_month
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed_mixin__day_of_month
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_fixed__day_of_month
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_fixed__day_of_month
+msgid "Day of Month"
+msgstr "Jour du mois"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_fixed__day_of_month
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_fixed_mixin__day_of_month
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_template_fixed__day_of_month
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_wizard_fixed__day_of_month
+msgid "Day of a monthly line. In shorter months the last day of the month is used instead: 31 becomes 30 in April, 28 or 29 in February."
+msgstr "Jour d'une ligne mensuelle. Dans les mois plus courts, c'est le dernier jour du mois qui est utilisé : 31 devient 30 en avril, 28 ou 29 en février."
+
+#. module: cron_time_windows
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_fixed__weekday
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_fixed_mixin__weekday
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_template_fixed__weekday
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_wizard_fixed__weekday
+msgid "Day of the week of a weekly line."
+msgstr "Jour de la semaine d'une ligne hebdomadaire."
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard__source__manual
+msgid "Define them here"
+msgstr "Les définir ici"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed__display_name
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed_mixin__display_name
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_line_mixin__display_name
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_settings_mixin__display_name
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template__display_name
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_fixed__display_name
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__display_name
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__display_name
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window_mixin__display_name
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard__display_name
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_fixed__display_name
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_settings_mixin__tw_outside_action__pause
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template__tw_outside_action__pause
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard__tw_outside_action__pause
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__ir_cron__tw_outside_action__pause
+msgid "Do not run"
+msgstr "Ne pas exécuter"
+
+#. module: cron_time_windows
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.ir_cron_view_form_inherit_time_windows
+msgid "Each window runs the job at its own interval, counted from the window start. Leave every day unticked to apply a window every day. A window that ends before it starts crosses midnight and belongs to the day it starts on. Execute Every is only used outside the windows, when they are set to run at the default interval."
+msgstr "Chaque plage exécute la tâche à son propre intervalle, compté depuis le début de la plage. Ne cochez aucun jour pour appliquer une plage tous les jours. Une plage qui se termine avant de commencer passe minuit et appartient au jour où elle commence. « Exécuter tous les » ne sert qu'en dehors des plages, lorsqu'elles sont réglées pour s'exécuter à l'intervalle par défaut."
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__hour_to
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__hour_to
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window_mixin__hour_to
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__hour_to
+msgid "End"
+msgstr "Fin"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__interval_number
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__interval_number
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window_mixin__interval_number
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__interval_number
+msgid "Every"
+msgstr "Toutes les"
+
+#. module: cron_time_windows
+#. odoo-python
+#: code:addons/cron_time_windows/models/cron_tw_mixin.py:0
+msgid "Every window pauses the job and nothing runs outside the windows: the job would never run."
+msgstr "Toutes les plages mettent la tâche en pause et rien ne s'exécute en dehors des plages : la tâche ne s'exécuterait jamais."
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template__tw_fixed_ids
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard__tw_fixed_ids
+#: model:ir.model.fields,field_description:cron_time_windows.field_ir_cron__tw_fixed_ids
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.ir_cron_view_search_inherit_time_windows
+msgid "Fixed Times"
+msgstr "Heures fixes"
+
+#. module: cron_time_windows
+#. odoo-python
+#: code:addons/cron_time_windows/models/cron_tw_mixin.py:0
+msgid "Fixed time %(time)s: a weekly line needs a weekday."
+msgstr "Heure fixe %(time)s : une ligne hebdomadaire doit avoir un jour de la semaine."
+
+#. module: cron_time_windows
+#. odoo-python
+#: code:addons/cron_time_windows/models/cron_tw_mixin.py:0
+msgid "Fixed time %(time)s: the day of the month must be between 1 and 31."
+msgstr "Heure fixe %(time)s : le jour du mois doit être compris entre 1 et 31."
+
+#. module: cron_time_windows
+#. odoo-python
+#: code:addons/cron_time_windows/models/cron_tw_mixin.py:0
+msgid "Fixed time %(time)s: the time must lie between 00:00 and 23:59."
+msgstr "Heure fixe %(time)s : l'heure doit être comprise entre 00:00 et 23:59."
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_settings_mixin__tw_mode__fixed
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template__tw_mode__fixed
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard__tw_mode__fixed
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__ir_cron__tw_mode__fixed
+msgid "Fixed times"
+msgstr "Heures fixes"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed__frequency
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed_mixin__frequency
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_fixed__frequency
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_fixed__frequency
+msgid "Frequency"
+msgstr "Fréquence"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__friday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__friday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window_mixin__friday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__friday
+msgid "Fri"
+msgstr "Ven"
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed__weekday__4
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed_mixin__weekday__4
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template_fixed__weekday__4
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard_fixed__weekday__4
+msgid "Friday"
+msgstr "Vendredi"
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template_window__interval_type__hours
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_window__interval_type__hours
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_window_mixin__interval_type__hours
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard_window__interval_type__hours
+msgid "Hours"
+msgstr "Heures"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed__id
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed_mixin__id
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_line_mixin__id
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_settings_mixin__id
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template__id
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_fixed__id
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__id
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__id
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window_mixin__id
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard__id
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_fixed__id
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__id
+msgid "ID"
+msgstr "ID"
+
+#. module: cron_time_windows
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.cron_tw_template_view_form
+msgid "Internal notes..."
+msgstr "Notes internes..."
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__interval_exceeds_window
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__interval_exceeds_window
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window_mixin__interval_exceeds_window
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__interval_exceeds_window
+msgid "Interval Longer Than Window"
+msgstr "Intervalle plus long que la plage"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_template_window__interval_number
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_window__interval_number
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_window_mixin__interval_number
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_wizard_window__interval_number
+msgid "Interval between two executions, counted from the window start."
+msgstr "Intervalle entre deux exécutions, compté depuis le début de la plage."
+
+#. module: cron_time_windows
+#. odoo-python
+#: code:addons/cron_time_windows/models/cron_tw_mixin.py:0
+msgid "Interval longer than the window"
+msgstr "Intervalle plus long que la plage"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed__write_uid
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template__write_uid
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_fixed__write_uid
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__write_uid
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__write_uid
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard__write_uid
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_fixed__write_uid
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed__write_date
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template__write_date
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_fixed__write_date
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__write_date
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__write_date
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard__write_date
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_fixed__write_date
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,help:cron_time_windows.field_ir_cron__tw_served_until
+msgid "Latest slot the job ran for, or the last change of the schedule if later. Slots up to this date never run again, even when a trigger wakes the job up."
+msgstr "Dernier créneau pour lequel la tâche s'est exécutée, ou dernier changement de la planification s'il est plus récent. Les créneaux jusqu'à cette date ne s'exécutent plus jamais, même si un déclencheur réveille la tâche."
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template_window__interval_type__minutes
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_window__interval_type__minutes
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_window_mixin__interval_type__minutes
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard_window__interval_type__minutes
+msgid "Minutes"
+msgstr "Minutes"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__monday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__monday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window_mixin__monday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__monday
+msgid "Mon"
+msgstr "Lun"
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed__weekday__0
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed_mixin__weekday__0
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template_fixed__weekday__0
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard_fixed__weekday__0
+msgid "Monday"
+msgstr "Lundi"
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed__frequency__monthly
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed_mixin__frequency__monthly
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template_fixed__frequency__monthly
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard_fixed__frequency__monthly
+msgid "Monthly"
+msgstr "Mensuelle"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_settings_mixin__tw_mode__native
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template__tw_mode__native
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard__tw_mode__native
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__ir_cron__tw_mode__native
+msgid "Native"
+msgstr "Natif"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_settings_mixin__tw_mode
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_template__tw_mode
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_wizard__tw_mode
+#: model:ir.model.fields,help:cron_time_windows.field_ir_cron__tw_mode
+msgid ""
+"Native: Odoo's standard scheduling, untouched.\n"
+"Time windows: restrict the job to time windows, each with its own frequency.\n"
+"Fixed times: run the job at fixed times, daily, weekly or monthly."
+msgstr ""
+"Natif : la planification standard d'Odoo, inchangée.\n"
+"Plages horaires : limite la tâche à des plages horaires, chacune avec sa propre fréquence.\n"
+"Heures fixes : exécute la tâche à heures fixes, chaque jour, chaque semaine ou chaque mois."
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_ir_cron__tw_nextcall_local
+msgid "Next Execution (Local)"
+msgstr "Prochaine exécution (heure locale)"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_ir_cron__tw_preview
+msgid "Next Executions"
+msgstr "Prochaines exécutions"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,help:cron_time_windows.field_ir_cron__tw_nextcall_local
+msgid "Next execution date, in the schedule timezone."
+msgstr "Date de prochaine exécution, dans le fuseau horaire de planification."
+
+#. module: cron_time_windows
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.ir_cron_view_form_inherit_time_windows
+msgid "Next executions"
+msgstr "Prochaines exécutions"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template__note
+msgid "Notes"
+msgstr "Notes"
+
+#. module: cron_time_windows
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.ir_cron_view_form_inherit_time_windows
+msgid "Odoo's standard scheduling: the job runs at the Execute Every interval, counted from its next execution date."
+msgstr "Planification standard d'Odoo : la tâche s'exécute à l'intervalle « Exécuter tous les », compté depuis sa date de prochaine exécution."
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_settings_mixin__tw_outside_action
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template__tw_outside_action
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard__tw_outside_action
+#: model:ir.model.fields,field_description:cron_time_windows.field_ir_cron__tw_outside_action
+msgid "Outside the Windows"
+msgstr "En dehors des plages"
+
+#. module: cron_time_windows
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.cron_tw_template_view_form
+msgid "Outside the windows, the default interval is the Execute Every interval of each scheduled action the template is applied to."
+msgstr "En dehors des plages, l'intervalle par défaut est l'intervalle « Exécuter tous les » de chaque action planifiée à laquelle le modèle est appliqué."
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template_window__action__pause
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_window__action__pause
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_window_mixin__action__pause
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard_window__action__pause
+msgid "Pause"
+msgstr "Pause"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard__reference_cron_id
+msgid "Reference Scheduled Action"
+msgstr "Action planifiée de référence"
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template_window__action__run
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_window__action__run
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_window_mixin__action__run
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard_window__action__run
+msgid "Run"
+msgstr "Exécuter"
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_settings_mixin__tw_outside_action__default_interval
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template__tw_outside_action__default_interval
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard__tw_outside_action__default_interval
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__ir_cron__tw_outside_action__default_interval
+msgid "Run at the default interval"
+msgstr "Exécuter à l'intervalle par défaut"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_template_window__action
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_window__action
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_window_mixin__action
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_wizard_window__action
+msgid "Run: execute the job at the window interval. Pause: never execute it during the window."
+msgstr "Exécuter : lance la tâche à l'intervalle de la plage. Pause : ne la lance jamais pendant la plage."
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__saturday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__saturday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window_mixin__saturday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__saturday
+msgid "Sat"
+msgstr "Sam"
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed__weekday__5
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed_mixin__weekday__5
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template_fixed__weekday__5
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard_fixed__weekday__5
+msgid "Saturday"
+msgstr "Samedi"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_settings_mixin__tw_mode
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template__tw_mode
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard__tw_mode
+#: model:ir.model.fields,field_description:cron_time_windows.field_ir_cron__tw_mode
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.cron_tw_template_view_search
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.ir_cron_view_search_inherit_time_windows
+msgid "Schedule Mode"
+msgstr "Mode de planification"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_settings_mixin__tw_tz
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template__tw_tz
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard__tw_tz
+#: model:ir.model.fields,field_description:cron_time_windows.field_ir_cron__tw_tz
+msgid "Schedule Timezone"
+msgstr "Fuseau horaire de planification"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed__cron_id
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__cron_id
+msgid "Scheduled Action"
+msgstr "Action planifiée"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard__cron_ids
+msgid "Scheduled Actions"
+msgstr "Actions planifiées"
+
+#. module: cron_time_windows
+#. odoo-python
+#: code:addons/cron_time_windows/wizard/cron_tw_wizard.py:0
+msgid "Select at least one scheduled action."
+msgstr "Sélectionnez au moins une action planifiée."
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed__sequence
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed_mixin__sequence
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_line_mixin__sequence
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_fixed__sequence
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__sequence
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__sequence
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window_mixin__sequence
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_fixed__sequence
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_ir_cron__tw_served_until
+msgid "Served Up To"
+msgstr "Servie jusqu'au"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard__source
+msgid "Source"
+msgstr "Source"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__hour_from
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__hour_from
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window_mixin__hour_from
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__hour_from
+msgid "Start"
+msgstr "Début"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__sunday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__sunday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window_mixin__sunday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__sunday
+msgid "Sun"
+msgstr "Dim"
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed__weekday__6
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed_mixin__weekday__6
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template_fixed__weekday__6
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard_fixed__weekday__6
+msgid "Sunday"
+msgstr "Dimanche"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_fixed__template_id
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__template_id
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard__template_id
+msgid "Template"
+msgstr "Modèle"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_template_window__interval_exceeds_window
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_window__interval_exceeds_window
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_window_mixin__interval_exceeds_window
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_wizard_window__interval_exceeds_window
+msgid "The interval is longer than the window: the job runs only once, at the window start."
+msgstr "L'intervalle est plus long que la plage : la tâche ne s'exécute qu'une fois, au début de la plage."
+
+#. module: cron_time_windows
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.ir_cron_view_form_inherit_time_windows
+msgid "The job runs at each listed time; Execute Every is not used. A monthly line set on a day the month lacks (the 31st in April) runs on the last day of that month."
+msgstr "La tâche s'exécute à chaque heure listée ; « Exécuter tous les » n'est pas utilisé. Une ligne mensuelle réglée sur un jour que le mois n'a pas (le 31 en avril) s'exécute le dernier jour de ce mois."
+
+#. module: cron_time_windows
+#: model:ir.model.fields,help:cron_time_windows.field_ir_cron__tw_preview
+msgid "The next executions, in the schedule timezone, or what prevents the schedule from being saved."
+msgstr "Les prochaines exécutions, dans le fuseau horaire de planification, ou ce qui empêche d'enregistrer la planification."
+
+#. module: cron_time_windows
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.cron_tw_wizard_view_form
+msgid "The selected scheduled actions go back to Odoo's standard scheduling. Their time windows and fixed times are kept."
+msgstr "Les actions planifiées sélectionnées reviennent à la planification standard d'Odoo. Leurs plages horaires et heures fixes sont conservées."
+
+#. module: cron_time_windows
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.cron_tw_wizard_view_form
+msgid "The time windows or fixed times of the selected scheduled actions are replaced by the ones below."
+msgstr "Les plages horaires ou heures fixes des actions planifiées sélectionnées sont remplacées par celles ci-dessous."
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__thursday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__thursday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window_mixin__thursday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__thursday
+msgid "Thu"
+msgstr "Jeu"
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed__weekday__3
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed_mixin__weekday__3
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template_fixed__weekday__3
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard_fixed__weekday__3
+msgid "Thursday"
+msgstr "Jeudi"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed__time_of_day
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed_mixin__time_of_day
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_fixed__time_of_day
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_fixed__time_of_day
+msgid "Time"
+msgstr "Heure"
+
+#. module: cron_time_windows
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.cron_tw_template_view_form
+msgid "Time Window Template"
+msgstr "Modèle de plages horaires"
+
+#. module: cron_time_windows
+#: model:ir.actions.act_window,name:cron_time_windows.action_cron_tw_template
+#: model:ir.ui.menu,name:cron_time_windows.menu_cron_tw_template
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.cron_tw_template_view_list
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.cron_tw_template_view_search
+msgid "Time Window Templates"
+msgstr "Modèles de plages horaires"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template__tw_window_ids
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard__tw_window_ids
+#: model:ir.model.fields,field_description:cron_time_windows.field_ir_cron__tw_window_ids
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.ir_cron_view_form_inherit_time_windows
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.ir_cron_view_search_inherit_time_windows
+msgid "Time Windows"
+msgstr "Plages horaires"
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard__source__template
+msgid "Time window template"
+msgstr "Modèle de plages horaires"
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_settings_mixin__tw_mode__windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template__tw_mode__windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard__tw_mode__windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__ir_cron__tw_mode__windows
+msgid "Time windows"
+msgstr "Plages horaires"
+
+#. module: cron_time_windows
+#. odoo-python
+#: code:addons/cron_time_windows/wizard/cron_tw_wizard.py:0
+msgid "Time windows applied to %(count)s scheduled action(s)."
+msgstr "Plages horaires appliquées à %(count)s action(s) planifiée(s)."
+
+#. module: cron_time_windows
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_settings_mixin__tw_tz
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_template__tw_tz
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_wizard__tw_tz
+#: model:ir.model.fields,help:cron_time_windows.field_ir_cron__tw_tz
+msgid "Timezone of the time windows and fixed times. Daylight saving changes are taken into account; the next execution date is still stored in UTC."
+msgstr "Fuseau horaire des plages et des heures fixes. Les changements d'heure sont pris en compte ; la date de prochaine exécution reste enregistrée en UTC."
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__tuesday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__tuesday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window_mixin__tuesday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__tuesday
+msgid "Tue"
+msgstr "Mar"
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed__weekday__1
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed_mixin__weekday__1
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template_fixed__weekday__1
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard_fixed__weekday__1
+msgid "Tuesday"
+msgstr "Mardi"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__interval_type
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__interval_type
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window_mixin__interval_type
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__interval_type
+msgid "Unit"
+msgstr "Unité"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_window__wednesday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window__wednesday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_window_mixin__wednesday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__wednesday
+msgid "Wed"
+msgstr "Mer"
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed__weekday__2
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed_mixin__weekday__2
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template_fixed__weekday__2
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard_fixed__weekday__2
+msgid "Wednesday"
+msgstr "Mercredi"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed__weekday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_fixed_mixin__weekday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_template_fixed__weekday
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_fixed__weekday
+msgid "Weekday"
+msgstr "Jour de la semaine"
+
+#. module: cron_time_windows
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed__frequency__weekly
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_fixed_mixin__frequency__weekly
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_template_fixed__frequency__weekly
+#: model:ir.model.fields.selection,name:cron_time_windows.selection__cron_tw_wizard_fixed__frequency__weekly
+msgid "Weekly"
+msgstr "Hebdomadaire"
+
+#. module: cron_time_windows
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_settings_mixin__tw_outside_action
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_template__tw_outside_action
+#: model:ir.model.fields,help:cron_time_windows.field_cron_tw_wizard__tw_outside_action
+#: model:ir.model.fields,help:cron_time_windows.field_ir_cron__tw_outside_action
+msgid "What happens at times that no window covers: the job does not run, or it runs at the scheduled action's own interval (Execute Every), counted from the end of the previous window."
+msgstr "Ce qui se passe aux heures qu'aucune plage ne couvre : la tâche ne s'exécute pas, ou elle s'exécute à l'intervalle propre de l'action planifiée (Exécuter tous les), compté depuis la fin de la plage précédente."
+
+#. module: cron_time_windows
+#. odoo-python
+#: code:addons/cron_time_windows/models/cron_tw_mixin.py:0
+msgid "Window %(window)s: a running window needs an interval greater than zero."
+msgstr "Plage %(window)s : une plage d'exécution doit avoir un intervalle supérieur à zéro."
+
+#. module: cron_time_windows
+#. odoo-python
+#: code:addons/cron_time_windows/models/cron_tw_mixin.py:0
+msgid "Window %(window)s: start and end must lie between 00:00 and 23:59 (write midnight as 00:00)."
+msgstr "Plage %(window)s : le début et la fin doivent être compris entre 00:00 et 23:59 (écrivez minuit 00:00)."
+
+#. module: cron_time_windows
+#. odoo-python
+#: code:addons/cron_time_windows/models/cron_tw_mixin.py:0
+msgid "Window %(window)s: the interval is longer than the window, so the job runs only once, at %(start)s."
+msgstr "Plage %(window)s : l'intervalle est plus long que la plage, la tâche ne s'exécute donc qu'une fois, à %(start)s."
+
+#. module: cron_time_windows
+#. odoo-python
+#: code:addons/cron_time_windows/models/cron_tw_mixin.py:0
+msgid "Windows %(first)s and %(second)s overlap on %(day)s."
+msgstr "Les plages %(first)s et %(second)s se chevauchent le %(day)s."
+
+#. module: cron_time_windows
+#. odoo-python
+#: code:addons/cron_time_windows/models/ir_cron.py:0
+msgid "With this schedule the job would never run."
+msgstr "Avec cette planification, la tâche ne s'exécuterait jamais."
+
+#. module: cron_time_windows
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_fixed__wizard_id
+#: model:ir.model.fields,field_description:cron_time_windows.field_cron_tw_wizard_window__wizard_id
+msgid "Wizard"
+msgstr "Assistant"
+
+#. module: cron_time_windows
+#: model_terms:ir.ui.view,arch_db:cron_time_windows.cron_tw_template_view_form
+msgid "e.g. Office hours"
+msgstr "ex. Heures de bureau"
